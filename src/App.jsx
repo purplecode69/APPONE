@@ -1,21 +1,28 @@
 import React from 'react';
-import Demo from './pages/Demo';
-import Header from './component/Header';
-import Hero from './component/Hero';
-import Main from './component/Main';
-import Contauct from './component/Contauct';
-import Footer from './component/Footer';
-// import Hero from 'daisyui/components/hero';
+
+const loginStatus = (status)=>{
+  if (status){
+    return (
+     <div>
+      <h1>akhon login kora acha </h1>
+      <button>Logout</button>
+     </div>
+    )
+
+  }else{
+    return(
+      <div>
+        <h1>Akhon LOgout kora acha </h1>
+        <button>Please Login </button>
+      </div>
+    )
+  }
+}
 
 const App = () => {
   return (
     <div>
-      <Header/>
-     <Hero/>
-      <Main/>
-      <Demo/>
-      <Contauct/>
-      <Footer/>
+      {loginStatus(true)}
       
     </div>
   );
